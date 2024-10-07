@@ -46,5 +46,5 @@ accountLevel:{
 },
 },{timestamps:true})
 //compile schema to model
-const User=mongoose.model("User",categorySchema)
+const User=mongoose.model("User",UserSchema)
 module.exports=User
