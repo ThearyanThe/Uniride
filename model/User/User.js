@@ -23,11 +23,7 @@ accountVerificationToken:{
 accountVerificationExpires:{
     type:Date
 },
-notificationPreferences:{
-    email:{type:String,default:true}
-    //..other notiftype
-  
-  },
+
   role:{
     type:String,
     require:true,
