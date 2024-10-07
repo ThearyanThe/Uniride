@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 const VehicleSchema = new Schema({
     type: { type: String, enum: ['motorcycle', 'car'], required: true },
     capacity: { type: Number, required: true },
@@ -7,7 +8,7 @@ const VehicleSchema = new Schema({
     driver: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     route: { type: String },
     schedule: { type: Date }
-  });
+  },{timestamps:true});
   //compile schema to model
-const Vehicle=mongoose.model("User",VehicleSchema)
+const Vehicle=mongoose.model("Vehicle",VehicleSchema)
 module.exports=Vehicle

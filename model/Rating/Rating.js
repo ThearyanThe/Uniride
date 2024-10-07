@@ -5,7 +5,7 @@ const RatingSchema = new Schema({
     rating: { type: Number, required: true, min: 1, max: 5 },
     comment: { type: String },
     createdAt: { type: Date, default: Date.now }
-  });
+  },{timestamps:true});
 //compile schema to model
 const Rating=mongoose.model("Rating",RatingSchema)
 module.exports=Rating
